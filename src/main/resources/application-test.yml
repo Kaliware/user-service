@@ -1,0 +1,20 @@
+# Dados de conexao com o banco H2
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+jwt:
+  secret: teste
+  expiration: 86400000
+
+

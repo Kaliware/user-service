@@ -1,0 +1,9 @@
+spring:
+  profiles:
+    active: ${APP_PROFILE:test}
+  application:
+    name: user-ms
+  jpa:
+    open-in-view: false
+server:
+  port: ${PORT:50100}
