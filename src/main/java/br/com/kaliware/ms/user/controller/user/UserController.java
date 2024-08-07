@@ -27,8 +27,8 @@ public class UserController extends CrudController<UserRecord, UUID> {
     return service;
   }
 
-  @GetMapping("/{email}")
-  public ResponseEntity<UserRecord> getById(@PathVariable String email) {
+  @GetMapping("/email/{email}")
+  public ResponseEntity<UserRecord> getByEmail(@PathVariable String email) {
     UserRecord record = service.findByEmail(email);
     return ResponseEntity.ok(record);
   }

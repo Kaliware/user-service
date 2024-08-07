@@ -1,7 +1,10 @@
-package br.com.kaliware.ms.user.entity;
+package br.com.kaliware.ms.user.entity.user;
 
 import jakarta.persistence.*;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
 
+import java.time.Instant;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -32,6 +35,16 @@ public class User {
       joinColumns = @JoinColumn(name = "user_id"),
       inverseJoinColumns = @JoinColumn(name = "role_id"))
   private Set<Role> roles = new HashSet<>();
+
+  @LastModifiedDate
+  @Column(name = "updated_at")
+  private Instant updatedAt;
+
+  @CreatedDate
+  @Column(name = "created_at")
+  private Instant createdAt;
+
+  private Instant deletedAt;
 
   public User() {
   }
@@ -76,16 +89,28 @@ public class User {
     this.email = email;
   }
 
-  public String getPassword() {
-    return password;
-  }
-
   public void setPassword(String password) {
     this.password = password;
   }
 
   public Set<Role> getRoles() {
     return roles;
+  }
+
+  public Instant getUpdatedAt() {
+    return updatedAt;
+  }
+
+  public Instant getCreatedAt() {
+    return createdAt;
+  }
+
+  public Instant getDeletedAt() {
+    return deletedAt;
+  }
+
+  public void setDeletedAt(Instant deletedAt) {
+    this.deletedAt = deletedAt;
   }
 
   @Override

@@ -16,5 +16,8 @@ spring:
 jwt:
   secret: teste
   expiration: 86400000
-
+user:
+  deletion:
+    days: 1
+    cron: 1 * * * * ?
 

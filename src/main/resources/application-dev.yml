@@ -15,3 +15,7 @@ spring:
 jwt:
   secret: Kal!w4re!ea5
   expiration: 86400000
+user:
+  deletion:
+    days: 10
+    cron: 1 * * * * ?

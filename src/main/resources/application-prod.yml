@@ -5,3 +5,7 @@ spring:
 jwt:
   secret: 2a7JAGCb8RHPmrYQZtSoshuTqnNFCQJZimPqsP6p$jR%gFt9D8ec6jJ^XEyMLKhRgcChTL6BSJcQMqjyisTg3aeZf&o89mMo7iN%iN#2HpxXAb3G%^4TbLju@JW%rRF2
   expiration: 86400000
+user:
+  deletion:
+    days: 120
+    cron: 0 0 0 * * ?

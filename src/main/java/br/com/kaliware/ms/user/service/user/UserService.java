@@ -9,4 +9,6 @@ public interface UserService extends CrudService<UserRecord, UUID> {
 
   UserRecord findByEmail(String email);
 
+  void deleteOldUsers();
+
 }

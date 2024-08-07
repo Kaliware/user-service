@@ -1,4 +1,4 @@
-package br.com.kaliware.ms.user.entity;
+package br.com.kaliware.ms.user.entity.user;
 
 import jakarta.persistence.*;
 
